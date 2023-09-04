@@ -1,2 +1,1 @@
-# python
-print("Hello, World!")
+# Application python pour tester le pipeline CI/CD
