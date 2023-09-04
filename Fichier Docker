@@ -1,5 +1,5 @@
 FROM python:3.6
-MAINTAINER Zaineb Khlifi <zainebkhkifiga@gmail.com>
+MAINTAINER syrine23kamoun <syrinekamooun23@gmail.com>
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
