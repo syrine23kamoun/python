@@ -1,7 +1,11 @@
-from ops import 
+from flask import Flask
+import os
 
-x=13
-resultat=x+2
-resultat=resultat*2
-print("Quand x vaut "+repr(x)+", le résultat vaut " +repr(resultat)+" !")
-print("Happy END !")
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+  return "test de pipeline"
+if __name__ == "__main__":
+  port = int(os.environ.get("PORT", 5000))
+  app.run(debug=True,host='0.0.0.0',port=port)
