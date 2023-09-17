@@ -28,4 +28,14 @@ pipeline {
             }
         }
     }
+     post {
+        success {
+            // Envoyez des notifications en cas de succès (par exemple, Slack, e-mail)
+            echo 'Pipeline réussi !'
+        }
+        failure {
+            // Envoyez des notifications en cas d'échec (par exemple, Slack, e-mail)
+            echo 'Le pipeline a échoué.'
+        }
+    }
 }
