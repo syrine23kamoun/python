@@ -23,6 +23,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Déployer votre application ici (par exemple, via Docker)
+                 sh 'docker build -t mon_app:latest .'
+                sh 'docker run -d -p 8080:80 mon_app:latest'
             }
         }
     }
